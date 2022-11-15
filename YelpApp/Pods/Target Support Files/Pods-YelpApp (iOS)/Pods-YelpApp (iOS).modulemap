@@ -1,0 +1,6 @@
+module Pods_YelpApp__iOS_ {
+  umbrella header "Pods-YelpApp (iOS)-umbrella.h"
+
+  export *
+  module * { export * }
+}
