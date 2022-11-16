@@ -17,7 +17,7 @@ public final class NetworkClient: RequestInterceptor {
                                             headers: [String: String]?,
                                             completion:
                                                     @escaping NetworkClosure<T>) {
-        var finalUrl = URLComponents(string: Constants.baseHost + url)
+        var finalUrl = URLComponents(string: url)
         finalUrl?.queryItems = params
 
         AF.request(finalUrl?.string ?? "",

@@ -35,6 +35,7 @@ struct CalendarNavigationButton: View {
 }
 
 struct SearchView: View {
+    @ObservedObject var viewModel = SearchViewModel()
 
     @State var keyword: String = ""
     @State var distance: String = "10"
@@ -64,7 +65,15 @@ struct SearchView: View {
                     .foregroundColor(ColorConstants.inputNameTextColor)
                     .font(/*@START_MENU_TOKEN@*/.callout/*@END_MENU_TOKEN@*/)
 
-                TextField("", text: $category)
+                Picker("", selection: $category) {
+                    Text("Default")
+                    Text("Arts and Entertainment")
+                    Text("Health and Medical")
+                    Text("Hotels and Travel")
+                    Text("Food")
+                    Text("Professional Services")
+                }
+                .pickerStyle(.menu)
             }
             if !autoDetectToggle {
                 HStack {
@@ -78,11 +87,35 @@ struct SearchView: View {
             HStack {
                 Text("Auto-detect my location")
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .lineLimit(1)
                     .foregroundColor(ColorConstants.inputNameTextColor)
                     .font(/*@START_MENU_TOKEN@*/.callout/*@END_MENU_TOKEN@*/)
 
-                Toggle("", isOn: $autoDetectToggle).labelsHidden()
+                Toggle("", isOn: $autoDetectToggle)
+                    .onChange(of: autoDetectToggle, perform: { newValue in
+                        if newValue {
+                            viewModel.getIpInfo()
+                        }
+                    })
+                    .labelsHidden()
+            }
+            HStack {
+                Button("Submit") {
+                    print()
+                }
+                .frame(width: 120.0, height: 55.0)
+                .background(ColorConstants.submitButtonDisabledColor)
+                .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
+                .cornerRadius(/*@START_MENU_TOKEN@*/10.0/*@END_MENU_TOKEN@*/)
+                .padding()
+
+                Button("Clear") {
+                    print()
+                }
+                .frame(width: 120.0, height: 55.0)
+                .background(.blue)
+                .foregroundColor(.white)
+                .cornerRadius(/*@START_MENU_TOKEN@*/10.0/*@END_MENU_TOKEN@*/)
+                .padding()
             }
         })
     }

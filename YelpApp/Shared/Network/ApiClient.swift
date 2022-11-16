@@ -16,7 +16,14 @@ final class ApiClient {
     public init() {}
 
     func autocompleteOptionsRequest(completion: @escaping NetworkClosure<AutocompleteDecodableModel>) {
-        networkClient.getApiRequest(url: Endpoint.autocomplete,
+        networkClient.getApiRequest(url: NetworkConstants.baseHost + Endpoint.autocomplete,
+                                    params: [],
+                                    headers: [:],
+                                    completion: completion)
+    }
+
+    func ipInfoRequest(completion: @escaping NetworkClosure<IpInfoDecodableModel>) {
+        networkClient.getApiRequest(url: NetworkConstants.ipInfoHost + NetworkConstants.ipInfoToken,
                                     params: [],
                                     headers: [:],
                                     completion: completion)
