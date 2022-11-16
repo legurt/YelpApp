@@ -9,8 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            VStack {
+                Text("Hello, world!")
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(ColorConstants.backgroundColor)
+            .navigationTitle("Business Search")
+            .navigationBarItems(trailing:
+                CalendarNavigationButton()
+            )
+        }
+    }
+}
+
+struct CalendarNavigationButton: View {
+    var body: some View {
+        NavigationLink(destination: BookingsView()) {
+            ImageConstants.calendarImage
+                .imageScale(.large)
+                .foregroundColor(.blue)
+        }
     }
 }
 
