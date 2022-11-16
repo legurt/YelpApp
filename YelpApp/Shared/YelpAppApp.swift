@@ -8,10 +8,19 @@
 import SwiftUI
 
 @main
-struct YelpAppApp: App {
+struct YelpApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ContentView()
+            }
+            .navigationViewStyle(StackNavigationViewStyle())
         }
+    }
+}
+
+struct App_Previews: PreviewProvider {
+    static var previews: some View {
+        YelpAppApp()
     }
 }
