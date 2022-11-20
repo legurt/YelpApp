@@ -28,6 +28,34 @@ final class ApiClient {
                                     headers: [:],
                                     completion: completion)
     }
+
+    func getLocationRequest(location: String,
+                            completion: @escaping NetworkClosure<GeocodingDecodableModel>) {
+        var queryItems: [URLQueryItem] = []
+        queryItems.append(URLQueryItem(name: "address", value: location))
+        networkClient.getApiRequest(url: NetworkConstants.baseHost + Endpoint.geocoding,
+                                    params: queryItems,
+                                    headers: [:],
+                                    completion: completion)
+    }
+    
+    func getBusinessesRequest(latitude: String,
+                              longitude: String,
+                              term: String,
+                              radius: String,
+                              categories: String,
+                              completion: @escaping NetworkClosure<BusinessesDecodableModel>) {
+        var queryItems: [URLQueryItem] = []
+        queryItems.append(URLQueryItem(name: "latitude", value: latitude))
+        queryItems.append(URLQueryItem(name: "longitude", value: longitude))
+        queryItems.append(URLQueryItem(name: "term", value: term))
+        queryItems.append(URLQueryItem(name: "radius", value: radius))
+        queryItems.append(URLQueryItem(name: "categories", value: categories))
+        networkClient.getApiRequest(url: NetworkConstants.baseHost + Endpoint.businesses,
+                                    params: queryItems,
+                                    headers: [:],
+                                    completion: completion)
+    }
 }
 
 private enum Endpoint {

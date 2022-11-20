@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843A4E2F2926C59F00846E72 /* GeocodingDecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A4E2E2926C59F00846E72 /* GeocodingDecodableModel.swift */; };
+		843A4E3C2927160300846E72 /* BusinessesDecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A4E3B2927160300846E72 /* BusinessesDecodableModel.swift */; };
+		843A4E3E2927227400846E72 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A4E3D2927227400846E72 /* ResultsView.swift */; };
+		843A4E40292722DD00846E72 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A4E3F292722DD00846E72 /* SearchView.swift */; };
+		843A4E422927243E00846E72 /* BusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A4E412927243E00846E72 /* BusinessModel.swift */; };
+		84555319292ABAFC00D8F4A7 /* DetailedBusinessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84555318292ABAFC00D8F4A7 /* DetailedBusinessView.swift */; };
 		8495ED3129257FC200D61050 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495ED3029257FC200D61050 /* SearchViewModel.swift */; };
 		8495ED3229257FC200D61050 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495ED3029257FC200D61050 /* SearchViewModel.swift */; };
 		8495ED342925811400D61050 /* BookingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F248902924A64600606A27 /* BookingsView.swift */; };
@@ -33,6 +39,12 @@
 		1493ED486E7133079364D43C /* Pods-YelpApp (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YelpApp (iOS).debug.xcconfig"; path = "Target Support Files/Pods-YelpApp (iOS)/Pods-YelpApp (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 		611ED3C6994D39FE9376B942 /* Pods-YelpApp (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YelpApp (macOS).release.xcconfig"; path = "Target Support Files/Pods-YelpApp (macOS)/Pods-YelpApp (macOS).release.xcconfig"; sourceTree = "<group>"; };
 		783A578A6A46A75CA905BF6E /* libPods-YelpApp (iOS).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YelpApp (iOS).a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		843A4E2E2926C59F00846E72 /* GeocodingDecodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingDecodableModel.swift; sourceTree = "<group>"; };
+		843A4E3B2927160300846E72 /* BusinessesDecodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesDecodableModel.swift; sourceTree = "<group>"; };
+		843A4E3D2927227400846E72 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		843A4E3F292722DD00846E72 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		843A4E412927243E00846E72 /* BusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessModel.swift; sourceTree = "<group>"; };
+		84555318292ABAFC00D8F4A7 /* DetailedBusinessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedBusinessView.swift; sourceTree = "<group>"; };
 		8495ED2F29257D8F00D61050 /* YelpApp--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "YelpApp--iOS--Info.plist"; sourceTree = "<group>"; };
 		8495ED3029257FC200D61050 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		8495ED372925866300D61050 /* IpInfoDecodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IpInfoDecodableModel.swift; sourceTree = "<group>"; };
@@ -98,6 +110,9 @@
 			children = (
 				84F248902924A64600606A27 /* BookingsView.swift */,
 				84C8AB502922DB0600F763AC /* BusinessSearchView.swift */,
+				843A4E3D2927227400846E72 /* ResultsView.swift */,
+				843A4E3F292722DD00846E72 /* SearchView.swift */,
+				84555318292ABAFC00D8F4A7 /* DetailedBusinessView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -106,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				84F2488B29235CF300606A27 /* DecodableModels */,
+				843A4E412927243E00846E72 /* BusinessModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,6 +181,8 @@
 			children = (
 				84F2488C29235D4000606A27 /* AutocompleteDecodableModel.swift */,
 				8495ED372925866300D61050 /* IpInfoDecodableModel.swift */,
+				843A4E2E2926C59F00846E72 /* GeocodingDecodableModel.swift */,
+				843A4E3B2927160300846E72 /* BusinessesDecodableModel.swift */,
 			);
 			path = DecodableModels;
 			sourceTree = "<group>";
@@ -337,12 +355,18 @@
 			files = (
 				84F248882923569200606A27 /* NetworkConstants.swift in Sources */,
 				84F2488D29235D4000606A27 /* AutocompleteDecodableModel.swift in Sources */,
+				843A4E3E2927227400846E72 /* ResultsView.swift in Sources */,
+				843A4E2F2926C59F00846E72 /* GeocodingDecodableModel.swift in Sources */,
 				84F248862923565A00606A27 /* Typealiases.swift in Sources */,
+				843A4E422927243E00846E72 /* BusinessModel.swift in Sources */,
 				84C8AB612922DB0700F763AC /* BusinessSearchView.swift in Sources */,
 				84F248912924A64600606A27 /* BookingsView.swift in Sources */,
+				84555319292ABAFC00D8F4A7 /* DetailedBusinessView.swift in Sources */,
 				84C8AB5F2922DB0700F763AC /* YelpApp.swift in Sources */,
 				8495ED3129257FC200D61050 /* SearchViewModel.swift in Sources */,
 				84F248782922E19F00606A27 /* NetworkClient.swift in Sources */,
+				843A4E40292722DD00846E72 /* SearchView.swift in Sources */,
+				843A4E3C2927160300846E72 /* BusinessesDecodableModel.swift in Sources */,
 				8495ED382925866300D61050 /* IpInfoDecodableModel.swift in Sources */,
 				84F2488A29235AA800606A27 /* ApiClient.swift in Sources */,
 			);
