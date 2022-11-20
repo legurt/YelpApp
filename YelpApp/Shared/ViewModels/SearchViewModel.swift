@@ -15,6 +15,7 @@ final class SearchViewModel: ObservableObject {
     @Published var latitude: String = ""
     @Published var locationCollected: Bool = false
     @Published var businesses: [BusinessModel] = []
+    @Published var isLoadingBusinesses = false
     
     func getIpInfo() {
         apiClient.ipInfoRequest {  [weak self] result in
@@ -60,6 +61,7 @@ final class SearchViewModel: ObservableObject {
                        term: String,
                        distance: String,
                        categories: String) {
+        isLoadingBusinesses = true
         apiClient.getBusinessesRequest(latitude: latitude,
                                        longitude: longitude,
                                        term: term,
@@ -78,6 +80,7 @@ final class SearchViewModel: ObservableObject {
                     self.businesses.append(businessModel)
                     i += 1
                 }
+                self.isLoadingBusinesses = false
                 case .failure(let error):
                     print(error)
                     return

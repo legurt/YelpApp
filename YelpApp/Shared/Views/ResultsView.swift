@@ -14,7 +14,20 @@ struct ResultsView: View {
         Text("Results")
             .bold()
             .font(.title)
+        if viewModel.isLoadingBusinesses {
+            HStack {
+                Spacer()
 
+                VStack {
+                    ProgressView()
+                    Spacer()
+                    Text("Please wait...")
+                        .foregroundColor(ColorConstants.inputNameTextColor)
+                }
+
+                Spacer()
+            }
+        }
         List(viewModel.businesses) { business in
             NavigationLink {
                 DetailedBusinessView()
