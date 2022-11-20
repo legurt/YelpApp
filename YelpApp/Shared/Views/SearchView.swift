@@ -94,7 +94,7 @@ struct SearchView: View {
                 .buttonStyle(BorderlessButtonStyle())
 
                 Button("Clear") {
-                    print()
+                    clearTapped()
                 }
                 .frame(width: 120.0, height: 55.0)
                 .background(.blue)
@@ -109,5 +109,15 @@ struct SearchView: View {
     func isSearchValid() -> Bool {
         let locationEntered = autoDetectToggle || location != ""
         return locationEntered && keyword != "" && viewModel.locationCollected
+    }
+
+    func clearTapped() {
+        keyword = ""
+        distance = "10"
+        category = "Default"
+        location = ""
+        autoDetectToggle = false
+        viewModel.businesses = []
+        viewModel.noResults = false
     }
 }

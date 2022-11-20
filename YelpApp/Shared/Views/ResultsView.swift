@@ -14,6 +14,10 @@ struct ResultsView: View {
         Text("Results")
             .bold()
             .font(.title)
+        if viewModel.noResults {
+            Text("No result available")
+                .foregroundColor(.red)
+        }
         if viewModel.isLoadingBusinesses {
             HStack {
                 Spacer()
@@ -28,6 +32,7 @@ struct ResultsView: View {
                 Spacer()
             }
         }
+        
         List(viewModel.businesses) { business in
             NavigationLink {
                 DetailedBusinessView()
