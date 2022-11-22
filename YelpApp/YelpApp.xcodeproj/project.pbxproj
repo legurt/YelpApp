@@ -18,6 +18,9 @@
 		8495ED342925811400D61050 /* BookingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F248902924A64600606A27 /* BookingsView.swift */; };
 		8495ED382925866300D61050 /* IpInfoDecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495ED372925866300D61050 /* IpInfoDecodableModel.swift */; };
 		8495ED392925866300D61050 /* IpInfoDecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495ED372925866300D61050 /* IpInfoDecodableModel.swift */; };
+		84A6FDB8292C5700007FE4D8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6FDB7292C5700007FE4D8 /* Extensions.swift */; };
+		84A6FDBA292C57FC007FE4D8 /* AlwaysPopoverModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6FDB9292C57FC007FE4D8 /* AlwaysPopoverModifier.swift */; };
+		84A6FDBC292C58B9007FE4D8 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6FDBB292C58B9007FE4D8 /* ContentViewController.swift */; };
 		84C8AB5F2922DB0700F763AC /* YelpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8AB4F2922DB0600F763AC /* YelpApp.swift */; };
 		84C8AB602922DB0700F763AC /* YelpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8AB4F2922DB0600F763AC /* YelpApp.swift */; };
 		84C8AB612922DB0700F763AC /* BusinessSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8AB502922DB0600F763AC /* BusinessSearchView.swift */; };
@@ -48,6 +51,9 @@
 		8495ED2F29257D8F00D61050 /* YelpApp--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "YelpApp--iOS--Info.plist"; sourceTree = "<group>"; };
 		8495ED3029257FC200D61050 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		8495ED372925866300D61050 /* IpInfoDecodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IpInfoDecodableModel.swift; sourceTree = "<group>"; };
+		84A6FDB7292C5700007FE4D8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		84A6FDB9292C57FC007FE4D8 /* AlwaysPopoverModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlwaysPopoverModifier.swift; sourceTree = "<group>"; };
+		84A6FDBB292C58B9007FE4D8 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		84C8AB4F2922DB0600F763AC /* YelpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpApp.swift; sourceTree = "<group>"; };
 		84C8AB502922DB0600F763AC /* BusinessSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSearchView.swift; sourceTree = "<group>"; };
 		84C8AB512922DB0700F763AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -134,6 +140,16 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		84A6FDBD292C590A007FE4D8 /* CustomPopover */ = {
+			isa = PBXGroup;
+			children = (
+				84A6FDBB292C58B9007FE4D8 /* ContentViewController.swift */,
+				84A6FDB9292C57FC007FE4D8 /* AlwaysPopoverModifier.swift */,
+				84A6FDB7292C5700007FE4D8 /* Extensions.swift */,
+			);
+			path = CustomPopover;
+			sourceTree = "<group>";
+		};
 		84C8AB492922DB0500F763AC = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +215,7 @@
 		84F2488F29244FCC00606A27 /* Utills */ = {
 			isa = PBXGroup;
 			children = (
+				84A6FDBD292C590A007FE4D8 /* CustomPopover */,
 				84C8AB512922DB0700F763AC /* Assets.xcassets */,
 				84F248872923569200606A27 /* NetworkConstants.swift */,
 				84F248852923565A00606A27 /* Typealiases.swift */,
@@ -362,11 +379,14 @@
 				84C8AB612922DB0700F763AC /* BusinessSearchView.swift in Sources */,
 				84F248912924A64600606A27 /* BookingsView.swift in Sources */,
 				84555319292ABAFC00D8F4A7 /* DetailedBusinessView.swift in Sources */,
+				84A6FDBC292C58B9007FE4D8 /* ContentViewController.swift in Sources */,
 				84C8AB5F2922DB0700F763AC /* YelpApp.swift in Sources */,
 				8495ED3129257FC200D61050 /* SearchViewModel.swift in Sources */,
+				84A6FDBA292C57FC007FE4D8 /* AlwaysPopoverModifier.swift in Sources */,
 				84F248782922E19F00606A27 /* NetworkClient.swift in Sources */,
 				843A4E40292722DD00846E72 /* SearchView.swift in Sources */,
 				843A4E3C2927160300846E72 /* BusinessesDecodableModel.swift in Sources */,
+				84A6FDB8292C5700007FE4D8 /* Extensions.swift in Sources */,
 				8495ED382925866300D61050 /* IpInfoDecodableModel.swift in Sources */,
 				84F2488A29235AA800606A27 /* ApiClient.swift in Sources */,
 			);

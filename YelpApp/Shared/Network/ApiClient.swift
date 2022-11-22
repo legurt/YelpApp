@@ -15,9 +15,12 @@ final class ApiClient {
     
     public init() {}
 
-    func autocompleteOptionsRequest(completion: @escaping NetworkClosure<AutocompleteDecodableModel>) {
+    func autocompleteOptionsRequest(text: String,
+                                    completion: @escaping NetworkClosure<AutocompleteDecodableModel>) {
+        var queryItems: [URLQueryItem] = []
+        queryItems.append(URLQueryItem(name: "text", value: text))
         networkClient.getApiRequest(url: NetworkConstants.baseHost + Endpoint.autocomplete,
-                                    params: [],
+                                    params: queryItems,
                                     headers: [:],
                                     completion: completion)
     }

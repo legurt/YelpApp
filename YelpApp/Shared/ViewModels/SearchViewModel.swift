@@ -17,6 +17,29 @@ final class SearchViewModel: ObservableObject {
     @Published var businesses: [BusinessModel] = []
     @Published var isLoadingBusinesses = false
     @Published var noResults = false
+    @Published var autocompleteOptions: [String] = []
+    @Published var isLoadingAutocomplete = false
+    
+    func getAutocompleteOptions(text: String) {
+        autocompleteOptions = []
+        isLoadingAutocomplete = true
+        apiClient.autocompleteOptionsRequest(text: text) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let value):
+                for category in value.categories {
+                    self.autocompleteOptions.append(category.title)
+                }
+                for term in value.terms {
+                    self.autocompleteOptions.append(term.text)
+                }
+                self.isLoadingAutocomplete = false
+            case .failure(let error):
+                print(error)
+                return
+            }
+        }
+    }
     
     func getIpInfo() {
         apiClient.ipInfoRequest {  [weak self] result in

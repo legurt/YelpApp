@@ -16,6 +16,7 @@ struct SearchView: View {
     @State var category: String = "Default"
     @State var location: String = ""
     @State var autoDetectToggle: Bool = false
+    @State var isShowingAutocomplete = false
 
     var body: some View {
         Section {
@@ -25,7 +26,37 @@ struct SearchView: View {
                     .font(/*@START_MENU_TOKEN@*/.callout/*@END_MENU_TOKEN@*/)
                 
                 TextField("Required", text: $keyword)
-                
+                .onChange(of: keyword) { newValue in
+                    if newValue.count != 0 {
+                        isShowingAutocomplete = true
+                        viewModel.getAutocompleteOptions(text: keyword)
+                    } else {
+                        isShowingAutocomplete = false
+                    }
+                }
+                .alwaysPopover(isPresented: $isShowingAutocomplete) {
+                    if viewModel.isLoadingAutocomplete {
+                        HStack {
+                            Spacer()
+                            VStack {
+                                Spacer()
+                                ProgressView()
+                                Text("loading...")
+                                    .foregroundColor(ColorConstants.inputNameTextColor)
+                            }
+                            Spacer()
+                        }.frame(maxWidth: .infinity, maxHeight: 60)
+                    }
+                    VStack {
+                        ForEach(viewModel.autocompleteOptions, id: \.self) { option in
+                            Text("\(option)")
+                                .foregroundColor(ColorConstants.inputNameTextColor)
+                                .onTapGesture {
+                                    keyword = option
+                                }
+                        }
+                    }.padding(15)
+                }
             }
             HStack {
                 Text("Distance:")
