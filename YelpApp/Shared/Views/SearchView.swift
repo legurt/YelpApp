@@ -19,121 +19,119 @@ struct SearchView: View {
     @State var isShowingAutocomplete = false
 
     var body: some View {
-        Section {
-            HStack {
-                Text("Keyword:")
-                    .foregroundColor(ColorConstants.inputNameTextColor)
-                    .font(/*@START_MENU_TOKEN@*/.callout/*@END_MENU_TOKEN@*/)
-                
-                TextField("Required", text: $keyword)
-                .onChange(of: keyword) { newValue in
-                    if newValue.count != 0 {
-                        isShowingAutocomplete = true
-                        viewModel.getAutocompleteOptions(text: keyword)
-                    } else {
-                        isShowingAutocomplete = false
-                    }
+        HStack {
+            Text("Keyword:")
+                .foregroundColor(ColorConstants.inputNameTextColor)
+                .font(/*@START_MENU_TOKEN@*/.callout/*@END_MENU_TOKEN@*/)
+            
+            TextField("Required", text: $keyword)
+            .onChange(of: keyword) { newValue in
+                if newValue.count != 0 {
+                    isShowingAutocomplete = true
+                    viewModel.getAutocompleteOptions(text: keyword)
+                } else {
+                    isShowingAutocomplete = false
                 }
-                .alwaysPopover(isPresented: $isShowingAutocomplete) {
-                    if viewModel.isLoadingAutocomplete {
-                        HStack {
+            }
+            .alwaysPopover(isPresented: $isShowingAutocomplete) {
+                if viewModel.isLoadingAutocomplete {
+                    HStack {
+                        Spacer()
+                        VStack {
                             Spacer()
-                            VStack {
-                                Spacer()
-                                ProgressView()
-                                Text("loading...")
-                                    .foregroundColor(ColorConstants.inputNameTextColor)
-                            }
-                            Spacer()
-                        }.frame(maxWidth: .infinity, maxHeight: 60)
-                    }
-                    VStack {
-                        ForEach(viewModel.autocompleteOptions, id: \.self) { option in
-                            Text("\(option)")
+                            ProgressView()
+                            Text("loading...")
                                 .foregroundColor(ColorConstants.inputNameTextColor)
-                                .onTapGesture {
-                                    keyword = option
-                                }
                         }
-                    }.padding(15)
+                        Spacer()
+                    }.frame(maxWidth: .infinity, maxHeight: 60)
                 }
+                VStack {
+                    ForEach(viewModel.autocompleteOptions, id: \.self) { option in
+                        Text("\(option)")
+                            .foregroundColor(ColorConstants.inputNameTextColor)
+                            .onTapGesture {
+                                keyword = option
+                            }
+                    }
+                }.padding(15)
             }
+        }
+        HStack {
+            Text("Distance:")
+                .foregroundColor(ColorConstants.inputNameTextColor)
+                .font(/*@START_MENU_TOKEN@*/.callout/*@END_MENU_TOKEN@*/)
+
+            TextField("", text: $distance)
+        }
+        HStack {
+            Text("Category:")
+                .foregroundColor(ColorConstants.inputNameTextColor)
+                .font(/*@START_MENU_TOKEN@*/.callout/*@END_MENU_TOKEN@*/)
+
+            Picker("", selection: $category) {
+                Text("Default")
+                Text("Arts and Entertainment")
+                Text("Health and Medical")
+                Text("Hotels and Travel")
+                Text("Food")
+                Text("Professional Services")
+            }
+            .pickerStyle(.menu)
+        }
+        if !autoDetectToggle {
             HStack {
-                Text("Distance:")
+                Text("Location:")
                     .foregroundColor(ColorConstants.inputNameTextColor)
                     .font(/*@START_MENU_TOKEN@*/.callout/*@END_MENU_TOKEN@*/)
 
-                TextField("", text: $distance)
-            }
-            HStack {
-                Text("Category:")
-                    .foregroundColor(ColorConstants.inputNameTextColor)
-                    .font(/*@START_MENU_TOKEN@*/.callout/*@END_MENU_TOKEN@*/)
-
-                Picker("", selection: $category) {
-                    Text("Default")
-                    Text("Arts and Entertainment")
-                    Text("Health and Medical")
-                    Text("Hotels and Travel")
-                    Text("Food")
-                    Text("Professional Services")
-                }
-                .pickerStyle(.menu)
-            }
-            if !autoDetectToggle {
-                HStack {
-                    Text("Location:")
-                        .foregroundColor(ColorConstants.inputNameTextColor)
-                        .font(/*@START_MENU_TOKEN@*/.callout/*@END_MENU_TOKEN@*/)
-
-                    TextField("Required", text: $location)
-                        .onSubmit {
-                            viewModel.locationCollected = false
-                            viewModel.getGeocodingByLocation(location)
-                        }
-                }
-            }
-            HStack {
-                Text("Auto-detect my location")
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .foregroundColor(ColorConstants.inputNameTextColor)
-                    .font(/*@START_MENU_TOKEN@*/.callout/*@END_MENU_TOKEN@*/)
-
-                Toggle("", isOn: $autoDetectToggle)
-                    .onChange(of: autoDetectToggle, perform: { newValue in
+                TextField("Required", text: $location)
+                    .onSubmit {
                         viewModel.locationCollected = false
-                        if newValue {
-                            viewModel.getIpInfo()
-                        }
-                    })
-                    .labelsHidden()
+                        viewModel.getGeocodingByLocation(location)
+                    }
             }
-            HStack {
-                Button("Submit") {
-                    viewModel.getBusinesses(latitude: viewModel.latitude,
-                                            longitude: viewModel.longitude,
-                                            term: keyword,
-                                            distance: distance,
-                                            categories: category)
-                }
-                .disabled(!isSearchValid())
-                .frame(width: 120.0, height: 55.0)
-                .background(!isSearchValid() ? ColorConstants.submitButtonDisabledColor : .red)
-                .foregroundColor(.white)
-                .cornerRadius(/*@START_MENU_TOKEN@*/10.0/*@END_MENU_TOKEN@*/)
-                .padding()
-                .buttonStyle(BorderlessButtonStyle())
+        }
+        HStack {
+            Text("Auto-detect my location")
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .foregroundColor(ColorConstants.inputNameTextColor)
+                .font(/*@START_MENU_TOKEN@*/.callout/*@END_MENU_TOKEN@*/)
 
-                Button("Clear") {
-                    clearTapped()
-                }
-                .frame(width: 120.0, height: 55.0)
-                .background(.blue)
-                .foregroundColor(.white)
-                .cornerRadius(/*@START_MENU_TOKEN@*/10.0/*@END_MENU_TOKEN@*/)
-                .padding()
-                .buttonStyle(BorderlessButtonStyle())
+            Toggle("", isOn: $autoDetectToggle)
+                .onChange(of: autoDetectToggle, perform: { newValue in
+                    viewModel.locationCollected = false
+                    if newValue {
+                        viewModel.getIpInfo()
+                    }
+                })
+                .labelsHidden()
+        }
+        HStack {
+            Button("Submit") {
+                viewModel.getBusinesses(latitude: viewModel.latitude,
+                                        longitude: viewModel.longitude,
+                                        term: keyword,
+                                        distance: distance,
+                                        categories: category)
             }
+            .disabled(!isSearchValid())
+            .frame(width: 120.0, height: 55.0)
+            .background(!isSearchValid() ? ColorConstants.submitButtonDisabledColor : .red)
+            .foregroundColor(.white)
+            .cornerRadius(/*@START_MENU_TOKEN@*/10.0/*@END_MENU_TOKEN@*/)
+            .padding()
+            .buttonStyle(BorderlessButtonStyle())
+
+            Button("Clear") {
+                clearTapped()
+            }
+            .frame(width: 120.0, height: 55.0)
+            .background(.blue)
+            .foregroundColor(.white)
+            .cornerRadius(/*@START_MENU_TOKEN@*/10.0/*@END_MENU_TOKEN@*/)
+            .padding()
+            .buttonStyle(BorderlessButtonStyle())
         }
     }
     

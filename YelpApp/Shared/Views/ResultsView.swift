@@ -34,12 +34,12 @@ struct ResultsView: View {
         }
         
         List(viewModel.businesses) { business in
+
             NavigationLink {
-                DetailedBusinessView()
+                TabBarView(businessId: business.id)
             } label: {
                 BusinessRow(business: business)
             }
-            .navigationTitle("Results")
         }
     }
 }

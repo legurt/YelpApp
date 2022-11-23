@@ -15,8 +15,12 @@ struct BusinessSearchView: View {
         NavigationView {
             VStack {
                 Form(content: {
-                    SearchView(viewModel: viewModel)
-                    ResultsView(viewModel: viewModel)
+                    Section {
+                        SearchView(viewModel: viewModel)
+                    }
+                    Section {
+                        ResultsView(viewModel: viewModel)
+                    }
                 })
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)

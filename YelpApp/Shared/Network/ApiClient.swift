@@ -59,6 +59,22 @@ final class ApiClient {
                                     headers: [:],
                                     completion: completion)
     }
+
+    func getDetailedBusinessRequest(id: String,
+                                    completion: @escaping NetworkClosure<DetailedBusinessDecodableModel>) {
+        networkClient.getApiRequest(url: NetworkConstants.baseHost + Endpoint.detailedBusiness + id,
+                                    params: [],
+                                    headers: [:],
+                                    completion: completion)
+    }
+
+    func getReviewsRequest(id: String,
+                           completion: @escaping NetworkClosure<ReviewsDecodableModel>) {
+        networkClient.getApiRequest(url: NetworkConstants.baseHost + Endpoint.reviews + id,
+                                    params: [],
+                                    headers: [:],
+                                    completion: completion)
+    }
 }
 
 private enum Endpoint {

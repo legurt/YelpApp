@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843140C8292CBB5A0010DCE6 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843140C7292CBB5A0010DCE6 /* TabBarView.swift */; };
+		843140CA292D61220010DCE6 /* BusinessLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843140C9292D61220010DCE6 /* BusinessLocationView.swift */; };
+		843140CC292D62ED0010DCE6 /* BusinessReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843140CB292D62ED0010DCE6 /* BusinessReviewsView.swift */; };
+		843140CE292D6C170010DCE6 /* DetailedBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843140CD292D6C170010DCE6 /* DetailedBusinessModel.swift */; };
+		843140D0292D6E3E0010DCE6 /* DetailedBusinessDecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843140CF292D6E3E0010DCE6 /* DetailedBusinessDecodableModel.swift */; };
+		843140D2292D78C00010DCE6 /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843140D1292D78C00010DCE6 /* ResultsViewModel.swift */; };
+		843140D4292D81EA0010DCE6 /* ReviewsDecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843140D3292D81EA0010DCE6 /* ReviewsDecodableModel.swift */; };
+		843140D6292D84CB0010DCE6 /* ReviewDecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843140D5292D84CB0010DCE6 /* ReviewDecodableModel.swift */; };
+		843140D8292DBB100010DCE6 /* ReviewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843140D7292DBB100010DCE6 /* ReviewsViewModel.swift */; };
 		843A4E2F2926C59F00846E72 /* GeocodingDecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A4E2E2926C59F00846E72 /* GeocodingDecodableModel.swift */; };
 		843A4E3C2927160300846E72 /* BusinessesDecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A4E3B2927160300846E72 /* BusinessesDecodableModel.swift */; };
 		843A4E3E2927227400846E72 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A4E3D2927227400846E72 /* ResultsView.swift */; };
@@ -42,6 +51,15 @@
 		1493ED486E7133079364D43C /* Pods-YelpApp (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YelpApp (iOS).debug.xcconfig"; path = "Target Support Files/Pods-YelpApp (iOS)/Pods-YelpApp (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 		611ED3C6994D39FE9376B942 /* Pods-YelpApp (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YelpApp (macOS).release.xcconfig"; path = "Target Support Files/Pods-YelpApp (macOS)/Pods-YelpApp (macOS).release.xcconfig"; sourceTree = "<group>"; };
 		783A578A6A46A75CA905BF6E /* libPods-YelpApp (iOS).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YelpApp (iOS).a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		843140C7292CBB5A0010DCE6 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		843140C9292D61220010DCE6 /* BusinessLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessLocationView.swift; sourceTree = "<group>"; };
+		843140CB292D62ED0010DCE6 /* BusinessReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessReviewsView.swift; sourceTree = "<group>"; };
+		843140CD292D6C170010DCE6 /* DetailedBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedBusinessModel.swift; sourceTree = "<group>"; };
+		843140CF292D6E3E0010DCE6 /* DetailedBusinessDecodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedBusinessDecodableModel.swift; sourceTree = "<group>"; };
+		843140D1292D78C00010DCE6 /* ResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewModel.swift; sourceTree = "<group>"; };
+		843140D3292D81EA0010DCE6 /* ReviewsDecodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsDecodableModel.swift; sourceTree = "<group>"; };
+		843140D5292D84CB0010DCE6 /* ReviewDecodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDecodableModel.swift; sourceTree = "<group>"; };
+		843140D7292DBB100010DCE6 /* ReviewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewModel.swift; sourceTree = "<group>"; };
 		843A4E2E2926C59F00846E72 /* GeocodingDecodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingDecodableModel.swift; sourceTree = "<group>"; };
 		843A4E3B2927160300846E72 /* BusinessesDecodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesDecodableModel.swift; sourceTree = "<group>"; };
 		843A4E3D2927227400846E72 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
@@ -119,6 +137,9 @@
 				843A4E3D2927227400846E72 /* ResultsView.swift */,
 				843A4E3F292722DD00846E72 /* SearchView.swift */,
 				84555318292ABAFC00D8F4A7 /* DetailedBusinessView.swift */,
+				843140C7292CBB5A0010DCE6 /* TabBarView.swift */,
+				843140C9292D61220010DCE6 /* BusinessLocationView.swift */,
+				843140CB292D62ED0010DCE6 /* BusinessReviewsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -128,6 +149,8 @@
 			children = (
 				84F2488B29235CF300606A27 /* DecodableModels */,
 				843A4E412927243E00846E72 /* BusinessModel.swift */,
+				843140CD292D6C170010DCE6 /* DetailedBusinessModel.swift */,
+				843140D5292D84CB0010DCE6 /* ReviewDecodableModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -136,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				8495ED3029257FC200D61050 /* SearchViewModel.swift */,
+				843140D1292D78C00010DCE6 /* ResultsViewModel.swift */,
+				843140D7292DBB100010DCE6 /* ReviewsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -199,6 +224,8 @@
 				8495ED372925866300D61050 /* IpInfoDecodableModel.swift */,
 				843A4E2E2926C59F00846E72 /* GeocodingDecodableModel.swift */,
 				843A4E3B2927160300846E72 /* BusinessesDecodableModel.swift */,
+				843140CF292D6E3E0010DCE6 /* DetailedBusinessDecodableModel.swift */,
+				843140D3292D81EA0010DCE6 /* ReviewsDecodableModel.swift */,
 			);
 			path = DecodableModels;
 			sourceTree = "<group>";
@@ -373,21 +400,30 @@
 				84F248882923569200606A27 /* NetworkConstants.swift in Sources */,
 				84F2488D29235D4000606A27 /* AutocompleteDecodableModel.swift in Sources */,
 				843A4E3E2927227400846E72 /* ResultsView.swift in Sources */,
+				843140D0292D6E3E0010DCE6 /* DetailedBusinessDecodableModel.swift in Sources */,
 				843A4E2F2926C59F00846E72 /* GeocodingDecodableModel.swift in Sources */,
 				84F248862923565A00606A27 /* Typealiases.swift in Sources */,
+				843140D2292D78C00010DCE6 /* ResultsViewModel.swift in Sources */,
+				843140CE292D6C170010DCE6 /* DetailedBusinessModel.swift in Sources */,
 				843A4E422927243E00846E72 /* BusinessModel.swift in Sources */,
+				843140CA292D61220010DCE6 /* BusinessLocationView.swift in Sources */,
 				84C8AB612922DB0700F763AC /* BusinessSearchView.swift in Sources */,
 				84F248912924A64600606A27 /* BookingsView.swift in Sources */,
 				84555319292ABAFC00D8F4A7 /* DetailedBusinessView.swift in Sources */,
+				843140D6292D84CB0010DCE6 /* ReviewDecodableModel.swift in Sources */,
 				84A6FDBC292C58B9007FE4D8 /* ContentViewController.swift in Sources */,
 				84C8AB5F2922DB0700F763AC /* YelpApp.swift in Sources */,
 				8495ED3129257FC200D61050 /* SearchViewModel.swift in Sources */,
 				84A6FDBA292C57FC007FE4D8 /* AlwaysPopoverModifier.swift in Sources */,
+				843140D8292DBB100010DCE6 /* ReviewsViewModel.swift in Sources */,
 				84F248782922E19F00606A27 /* NetworkClient.swift in Sources */,
 				843A4E40292722DD00846E72 /* SearchView.swift in Sources */,
 				843A4E3C2927160300846E72 /* BusinessesDecodableModel.swift in Sources */,
 				84A6FDB8292C5700007FE4D8 /* Extensions.swift in Sources */,
+				843140D4292D81EA0010DCE6 /* ReviewsDecodableModel.swift in Sources */,
 				8495ED382925866300D61050 /* IpInfoDecodableModel.swift in Sources */,
+				843140C8292CBB5A0010DCE6 /* TabBarView.swift in Sources */,
+				843140CC292D62ED0010DCE6 /* BusinessReviewsView.swift in Sources */,
 				84F2488A29235AA800606A27 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

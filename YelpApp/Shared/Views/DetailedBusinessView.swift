@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct DetailedBusinessView: View {
+    
+    var detailedBusiness: DetailedBusinessModel
+    
     var body: some View {
-        Text("DetailedBusinessView")
+        Text(detailedBusiness.name ?? "")
     }
 }
