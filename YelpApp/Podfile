@@ -5,11 +5,3 @@ target 'YelpApp (iOS)' do
   pod 'Alamofire'
 
 end
-
-target 'YelpApp (macOS)' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for YelpApp (macOS)
-
-end
