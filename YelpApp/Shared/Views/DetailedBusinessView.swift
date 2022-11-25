@@ -26,7 +26,8 @@ struct DetailedBusinessView: View {
                 
                 ReservationButton()
                 
-                ShareBusinessView()
+                ShareBusinessView(businessName: viewModel.detailedBusiness.name ?? "",
+                                  businessUrl: viewModel.detailedBusiness.yelpUrl ?? "")
                     .padding()
                 
                 if viewModel.detailedBusiness.images != nil {
@@ -117,18 +118,30 @@ struct ReservationButton: View {
 }
 
 struct ShareBusinessView: View {
+    var businessName: String
+    var businessUrl: String
+
     var body: some View {
         HStack {
             Text("Share no:").bold()
             Button {
-                print("Facebook tapped")
+                let stringUrl = "https://www.facebook.com/sharer/sharer.php?u=\(businessUrl)"
+                if let url = URL(string: stringUrl) {
+                    UIApplication.shared.open(url)
+                }
             } label: {
                 Image("facebook")
                     .resizable()
                     .frame(width: 40, height: 40)
             }
             Button {
-                print("Twitter tapped")
+                let stringUrl = "https://twitter.com/intent/tweet?text=Check%20"
+                + businessName
+                + "%20on%20Yelp.%20"
+                + businessUrl
+                if let url = URL(string: stringUrl) {
+                    UIApplication.shared.open(url)
+                }
             } label: {
                 Image("twitter")
                     .resizable()
