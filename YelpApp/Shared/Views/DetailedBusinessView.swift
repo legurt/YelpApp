@@ -16,28 +16,30 @@ struct DetailedBusinessView: View {
             CustomProgressView()
         }
         else {
-            VStack() {
-                Text(viewModel.detailedBusiness.name ?? "")
-                    .font(.title)
-                    .bold()
-                    .padding(.bottom)
-                
-                DetailedInformationView(detailedBusiness: viewModel.detailedBusiness)
-                
-                ReservationButton()
-                
-                ShareBusinessView(businessName: viewModel.detailedBusiness.name ?? "",
-                                  businessUrl: viewModel.detailedBusiness.yelpUrl ?? "")
-                    .padding()
-                
-                if viewModel.detailedBusiness.images != nil {
-                    ImageSliderView(images: viewModel.detailedBusiness.images!)
-                        .frame(width: 300, height: 230)
+            ScrollView {
+                VStack() {
+                    Text(viewModel.detailedBusiness.name ?? "")
+                        .font(.title)
+                        .bold()
+                        .padding(.bottom)
+                    
+                    DetailedInformationView(detailedBusiness: viewModel.detailedBusiness)
+                    
+                    ReservationButton()
+                    
+                    ShareBusinessView(businessName: viewModel.detailedBusiness.name ?? "",
+                                      businessUrl: viewModel.detailedBusiness.yelpUrl ?? "")
+                        .padding()
+                    
+                    if viewModel.detailedBusiness.images != nil {
+                        ImageSliderView(images: viewModel.detailedBusiness.images!)
+                            .frame(width: 300, height: 230)
+                    }
+                    Spacer()
                 }
-                Spacer()
+                .padding()
+                .navigationBarTitle(Text(""), displayMode: .inline)
             }
-            .padding()
-            .navigationBarTitle(Text(""), displayMode: .inline)
         }
     }
 }
