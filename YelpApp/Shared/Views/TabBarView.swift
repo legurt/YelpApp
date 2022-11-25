@@ -14,7 +14,7 @@ struct TabBarView: View {
 
     var body: some View {
         TabView {
-            DetailedBusinessView(detailedBusiness: viewModel.detailedBusiness)
+            DetailedBusinessView(viewModel: viewModel)
                 .tabItem {
                     Label("Business Detail", systemImage: "text.bubble.fill")
                 }

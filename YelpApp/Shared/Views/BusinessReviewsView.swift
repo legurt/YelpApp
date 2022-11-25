@@ -13,11 +13,7 @@ struct BusinessReviewsView: View {
 
     var body: some View {
         if viewModel.isLoadingReviews {
-            VStack {
-                ProgressView()
-                Text("Please wait...")
-                    .foregroundColor(ColorConstants.inputNameTextColor)
-            }
+            CustomProgressView()
         } else {
             VStack {
                 List(viewModel.reviews) { review in

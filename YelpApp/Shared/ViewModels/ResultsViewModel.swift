@@ -10,14 +10,16 @@ import Foundation
 final class ResultsViewModel: ObservableObject {
     private lazy var apiClient = ApiClient.shared
 
-    @Published var detailedBusiness = DetailedBusinessModel()
+    @Published var detailedBusiness: DetailedBusinessModel
     @Published var reviews: [ReviewModel]
     @Published var isLoadingReviews: Bool
     
     public init(reviews: [ReviewModel] = [],
-                isLoadingReviews: Bool = true) {
+                isLoadingReviews: Bool = true,
+                detailedBusiness: DetailedBusinessModel = DetailedBusinessModel()) {
         self.reviews = reviews
         self.isLoadingReviews = isLoadingReviews
+        self.detailedBusiness = detailedBusiness
     }
 
     func getReviews(id: String) {
