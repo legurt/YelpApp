@@ -10,11 +10,11 @@ import Foundation
 struct DetailedBusinessModel {
     var id: String?
     var name: String?
-    var categories: [String]?
+    var categories: String?
     var coordinates: CoordinatesModel?
     var phone: String?
     var isOpen: Bool?
-    var address: [String]?
+    var address: String?
     var images: [String]?
     var price: String?
     var yelpUrl: String?

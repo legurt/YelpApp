@@ -10,7 +10,7 @@ import SwiftUI
 struct TabBarView: View {
     var businessId: String
 
-    @ObservedObject var viewModel = ResultsViewModel()
+    @ObservedObject private var viewModel = ResultsViewModel()
 
     var body: some View {
         TabView {
@@ -24,12 +24,13 @@ struct TabBarView: View {
                     Label("Map Location", systemImage: "location.fill")
                 }
 
-            BusinessReviewsView(businessId: businessId)
-                .tabItem {
-                    Label("Reviews", systemImage: "message.fill")
-                }
+            BusinessReviewsView(viewModel: viewModel)
+            .tabItem {
+                Label("Reviews", systemImage: "message.fill")
+            }
         }.onAppear {
             viewModel.getDetailedBusiness(id: businessId)
+            viewModel.getReviews(id: businessId)
         }
     }
 }

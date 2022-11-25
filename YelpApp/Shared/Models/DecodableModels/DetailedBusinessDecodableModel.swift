@@ -21,6 +21,21 @@ struct DetailedBusinessDecodableModel: Codable {
 }
 
 extension DetailedBusinessDecodableModel {
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case categories
+        case coordinates
+        case phone = "display_phone"
+        case hours
+        case location
+        case photos
+        case price
+        case url
+    }
+}
+
+extension DetailedBusinessDecodableModel {
     func toDomain() -> DetailedBusinessModel {
         return .init(id: id,
                      name: name,
@@ -28,7 +43,7 @@ extension DetailedBusinessDecodableModel {
                      coordinates: coordinates?.toDomain(),
                      phone: phone,
                      isOpen: hours?[0].isOpen,
-                     address: location?.address,
+                     address: location?.address.joined(separator: ", "),
                      images: photos,
                      price: price,
                      yelpUrl: url)

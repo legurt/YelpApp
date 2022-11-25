@@ -41,7 +41,7 @@ extension ReviewDecodableModel {
                      rating: rating,
                      name: user.name,
                      text: text,
-                     time: time)
+                     time: time.components(separatedBy: " ")[0])
     }
 }
 

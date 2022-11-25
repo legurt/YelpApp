@@ -109,11 +109,7 @@ struct SearchView: View {
         }
         HStack {
             Button("Submit") {
-                viewModel.getBusinesses(latitude: viewModel.latitude,
-                                        longitude: viewModel.longitude,
-                                        term: keyword,
-                                        distance: distance,
-                                        categories: category)
+                submitTapped()
             }
             .disabled(!isSearchValid())
             .frame(width: 120.0, height: 55.0)
@@ -138,6 +134,14 @@ struct SearchView: View {
     func isSearchValid() -> Bool {
         let locationEntered = autoDetectToggle || location != ""
         return locationEntered && keyword != "" && viewModel.locationCollected
+    }
+    
+    func submitTapped() {
+        viewModel.getBusinesses(latitude: viewModel.latitude,
+                                longitude: viewModel.longitude,
+                                term: keyword,
+                                distance: distance,
+                                categories: category)
     }
 
     func clearTapped() {

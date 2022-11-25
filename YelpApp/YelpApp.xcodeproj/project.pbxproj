@@ -24,12 +24,14 @@
 		84555319292ABAFC00D8F4A7 /* DetailedBusinessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84555318292ABAFC00D8F4A7 /* DetailedBusinessView.swift */; };
 		8495ED3129257FC200D61050 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495ED3029257FC200D61050 /* SearchViewModel.swift */; };
 		8495ED382925866300D61050 /* IpInfoDecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495ED372925866300D61050 /* IpInfoDecodableModel.swift */; };
+		849774E42930152B0060D029 /* ImageSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849774E32930152B0060D029 /* ImageSliderView.swift */; };
 		84A6FDB8292C5700007FE4D8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6FDB7292C5700007FE4D8 /* Extensions.swift */; };
 		84A6FDBA292C57FC007FE4D8 /* AlwaysPopoverModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6FDB9292C57FC007FE4D8 /* AlwaysPopoverModifier.swift */; };
 		84A6FDBC292C58B9007FE4D8 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6FDBB292C58B9007FE4D8 /* ContentViewController.swift */; };
 		84C8AB5F2922DB0700F763AC /* YelpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8AB4F2922DB0600F763AC /* YelpApp.swift */; };
 		84C8AB612922DB0700F763AC /* BusinessSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8AB502922DB0600F763AC /* BusinessSearchView.swift */; };
 		84C8AB632922DB0700F763AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C8AB512922DB0700F763AC /* Assets.xcassets */; };
+		84CDB71C292FE90700A907D8 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDB71B292FE90700A907D8 /* MockData.swift */; };
 		84F248782922E19F00606A27 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F248772922E19F00606A27 /* NetworkClient.swift */; };
 		84F248862923565A00606A27 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F248852923565A00606A27 /* Typealiases.swift */; };
 		84F248882923569200606A27 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F248872923569200606A27 /* NetworkConstants.swift */; };
@@ -60,6 +62,7 @@
 		8495ED2F29257D8F00D61050 /* YelpApp--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "YelpApp--iOS--Info.plist"; sourceTree = "<group>"; };
 		8495ED3029257FC200D61050 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		8495ED372925866300D61050 /* IpInfoDecodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IpInfoDecodableModel.swift; sourceTree = "<group>"; };
+		849774E32930152B0060D029 /* ImageSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderView.swift; sourceTree = "<group>"; };
 		84A6FDB7292C5700007FE4D8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		84A6FDB9292C57FC007FE4D8 /* AlwaysPopoverModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlwaysPopoverModifier.swift; sourceTree = "<group>"; };
 		84A6FDBB292C58B9007FE4D8 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +70,7 @@
 		84C8AB502922DB0600F763AC /* BusinessSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSearchView.swift; sourceTree = "<group>"; };
 		84C8AB512922DB0700F763AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84C8AB562922DB0700F763AC /* YelpApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YelpApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84CDB71B292FE90700A907D8 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		84F248772922E19F00606A27 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		84F248852923565A00606A27 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		84F248872923569200606A27 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 				843140C7292CBB5A0010DCE6 /* TabBarView.swift */,
 				843140C9292D61220010DCE6 /* BusinessLocationView.swift */,
 				843140CB292D62ED0010DCE6 /* BusinessReviewsView.swift */,
+				849774E32930152B0060D029 /* ImageSliderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 				84C8AB512922DB0700F763AC /* Assets.xcassets */,
 				84F248872923569200606A27 /* NetworkConstants.swift */,
 				84F248852923565A00606A27 /* Typealiases.swift */,
+				84CDB71B292FE90700A907D8 /* MockData.swift */,
 			);
 			path = Utills;
 			sourceTree = "<group>";
@@ -318,9 +324,11 @@
 				843A4E3E2927227400846E72 /* ResultsView.swift in Sources */,
 				843140D0292D6E3E0010DCE6 /* DetailedBusinessDecodableModel.swift in Sources */,
 				843A4E2F2926C59F00846E72 /* GeocodingDecodableModel.swift in Sources */,
+				84CDB71C292FE90700A907D8 /* MockData.swift in Sources */,
 				84F248862923565A00606A27 /* Typealiases.swift in Sources */,
 				843140D2292D78C00010DCE6 /* ResultsViewModel.swift in Sources */,
 				843140CE292D6C170010DCE6 /* DetailedBusinessModel.swift in Sources */,
+				849774E42930152B0060D029 /* ImageSliderView.swift in Sources */,
 				843A4E422927243E00846E72 /* BusinessModel.swift in Sources */,
 				843140CA292D61220010DCE6 /* BusinessLocationView.swift in Sources */,
 				84C8AB612922DB0700F763AC /* BusinessSearchView.swift in Sources */,

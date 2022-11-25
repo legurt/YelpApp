@@ -15,8 +15,8 @@ struct AutocompleteDecodableModel: Codable {
 typealias CategoriesDecodableModel = [CategoryDecodableModel]
 
 extension CategoriesDecodableModel {
-    func toDomain() -> [String] {
-        return self.map { $0.title }
+    func toDomain() -> String {
+        return self.map { $0.title }.joined(separator: " | ")
     }
 }
 
