@@ -15,7 +15,6 @@
 		843140D2292D78C00010DCE6 /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843140D1292D78C00010DCE6 /* ResultsViewModel.swift */; };
 		843140D4292D81EA0010DCE6 /* ReviewsDecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843140D3292D81EA0010DCE6 /* ReviewsDecodableModel.swift */; };
 		843140D6292D84CB0010DCE6 /* ReviewDecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843140D5292D84CB0010DCE6 /* ReviewDecodableModel.swift */; };
-		843140D8292DBB100010DCE6 /* ReviewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843140D7292DBB100010DCE6 /* ReviewsViewModel.swift */; };
 		843A4E2F2926C59F00846E72 /* GeocodingDecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A4E2E2926C59F00846E72 /* GeocodingDecodableModel.swift */; };
 		843A4E3C2927160300846E72 /* BusinessesDecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A4E3B2927160300846E72 /* BusinessesDecodableModel.swift */; };
 		843A4E3E2927227400846E72 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A4E3D2927227400846E72 /* ResultsView.swift */; };
@@ -53,7 +52,6 @@
 		843140D1292D78C00010DCE6 /* ResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewModel.swift; sourceTree = "<group>"; };
 		843140D3292D81EA0010DCE6 /* ReviewsDecodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsDecodableModel.swift; sourceTree = "<group>"; };
 		843140D5292D84CB0010DCE6 /* ReviewDecodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDecodableModel.swift; sourceTree = "<group>"; };
-		843140D7292DBB100010DCE6 /* ReviewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewModel.swift; sourceTree = "<group>"; };
 		843A4E2E2926C59F00846E72 /* GeocodingDecodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingDecodableModel.swift; sourceTree = "<group>"; };
 		843A4E3B2927160300846E72 /* BusinessesDecodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesDecodableModel.swift; sourceTree = "<group>"; };
 		843A4E3D2927227400846E72 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 			children = (
 				8495ED3029257FC200D61050 /* SearchViewModel.swift */,
 				843140D1292D78C00010DCE6 /* ResultsViewModel.swift */,
-				843140D7292DBB100010DCE6 /* ReviewsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -343,7 +340,6 @@
 				84C8AB5F2922DB0700F763AC /* YelpApp.swift in Sources */,
 				8495ED3129257FC200D61050 /* SearchViewModel.swift in Sources */,
 				84A6FDBA292C57FC007FE4D8 /* AlwaysPopoverModifier.swift in Sources */,
-				843140D8292DBB100010DCE6 /* ReviewsViewModel.swift in Sources */,
 				84F248782922E19F00606A27 /* NetworkClient.swift in Sources */,
 				843A4E40292722DD00846E72 /* SearchView.swift in Sources */,
 				843A4E3C2927160300846E72 /* BusinessesDecodableModel.swift in Sources */,
