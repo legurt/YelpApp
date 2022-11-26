@@ -19,7 +19,8 @@ struct TabBarView: View {
                     Label("Business Detail", systemImage: "text.bubble.fill")
                 }
             
-            BusinessLocationView()
+            BusinessLocationView(latitude: viewModel.detailedBusiness.coordinates?.lattitude ?? 0,
+                                 longitude: viewModel.detailedBusiness.coordinates?.longitude ?? 0)
                 .tabItem {
                     Label("Map Location", systemImage: "location.fill")
                 }

@@ -11,12 +11,12 @@ struct SearchView: View {
     
     @ObservedObject var viewModel: SearchViewModel
 
-    @State var keyword: String = ""
-    @State var distance: String = "10"
-    @State var category: String = "Default"
-    @State var location: String = ""
-    @State var autoDetectToggle: Bool = false
-    @State var isShowingAutocomplete = false
+    @State private var keyword: String = ""
+    @State private var distance: String = "10"
+    @State private var category: String = "Default"
+    @State private var location: String = ""
+    @State private var autoDetectToggle: Bool = false
+    @State private var isShowingAutocomplete = false
 
     var body: some View {
         HStack {
