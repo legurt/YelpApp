@@ -25,7 +25,10 @@
 		8495ED382925866300D61050 /* IpInfoDecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495ED372925866300D61050 /* IpInfoDecodableModel.swift */; };
 		849774E42930152B0060D029 /* ImageSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849774E32930152B0060D029 /* ImageSliderView.swift */; };
 		84A2760F2931FFFD00595156 /* IdentifiableLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2760E2931FFFD00595156 /* IdentifiableLocation.swift */; };
-		84A6FDB8292C5700007FE4D8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6FDB7292C5700007FE4D8 /* Extensions.swift */; };
+		84A2761129328B4E00595156 /* ReservationSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2761029328B4E00595156 /* ReservationSheet.swift */; };
+		84A276142933DEFF00595156 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A276132933DEFF00595156 /* ToastView.swift */; };
+		84A276162933DF5700595156 /* ExtensionsToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A276152933DF5700595156 /* ExtensionsToast.swift */; };
+		84A6FDB8292C5700007FE4D8 /* ExtensionsPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6FDB7292C5700007FE4D8 /* ExtensionsPopover.swift */; };
 		84A6FDBA292C57FC007FE4D8 /* AlwaysPopoverModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6FDB9292C57FC007FE4D8 /* AlwaysPopoverModifier.swift */; };
 		84A6FDBC292C58B9007FE4D8 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6FDBB292C58B9007FE4D8 /* ContentViewController.swift */; };
 		84C8AB5F2922DB0700F763AC /* YelpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8AB4F2922DB0600F763AC /* YelpApp.swift */; };
@@ -64,7 +67,10 @@
 		8495ED372925866300D61050 /* IpInfoDecodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IpInfoDecodableModel.swift; sourceTree = "<group>"; };
 		849774E32930152B0060D029 /* ImageSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderView.swift; sourceTree = "<group>"; };
 		84A2760E2931FFFD00595156 /* IdentifiableLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableLocation.swift; sourceTree = "<group>"; };
-		84A6FDB7292C5700007FE4D8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		84A2761029328B4E00595156 /* ReservationSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationSheet.swift; sourceTree = "<group>"; };
+		84A276132933DEFF00595156 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		84A276152933DF5700595156 /* ExtensionsToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsToast.swift; sourceTree = "<group>"; };
+		84A6FDB7292C5700007FE4D8 /* ExtensionsPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsPopover.swift; sourceTree = "<group>"; };
 		84A6FDB9292C57FC007FE4D8 /* AlwaysPopoverModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlwaysPopoverModifier.swift; sourceTree = "<group>"; };
 		84A6FDBB292C58B9007FE4D8 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		84C8AB4F2922DB0600F763AC /* YelpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpApp.swift; sourceTree = "<group>"; };
@@ -126,6 +132,7 @@
 				843140CB292D62ED0010DCE6 /* BusinessReviewsView.swift */,
 				849774E32930152B0060D029 /* ImageSliderView.swift */,
 				84EC556A29314C810051371E /* CustomProgressView.swift */,
+				84A2761029328B4E00595156 /* ReservationSheet.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,12 +158,21 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		84A276122933DED200595156 /* CustomToast */ = {
+			isa = PBXGroup;
+			children = (
+				84A276132933DEFF00595156 /* ToastView.swift */,
+				84A276152933DF5700595156 /* ExtensionsToast.swift */,
+			);
+			path = CustomToast;
+			sourceTree = "<group>";
+		};
 		84A6FDBD292C590A007FE4D8 /* CustomPopover */ = {
 			isa = PBXGroup;
 			children = (
 				84A6FDBB292C58B9007FE4D8 /* ContentViewController.swift */,
 				84A6FDB9292C57FC007FE4D8 /* AlwaysPopoverModifier.swift */,
-				84A6FDB7292C5700007FE4D8 /* Extensions.swift */,
+				84A6FDB7292C5700007FE4D8 /* ExtensionsPopover.swift */,
 			);
 			path = CustomPopover;
 			sourceTree = "<group>";
@@ -218,6 +234,7 @@
 		84F2488F29244FCC00606A27 /* Utills */ = {
 			isa = PBXGroup;
 			children = (
+				84A276122933DED200595156 /* CustomToast */,
 				84A6FDBD292C590A007FE4D8 /* CustomPopover */,
 				84C8AB512922DB0700F763AC /* Assets.xcassets */,
 				84F248872923569200606A27 /* NetworkConstants.swift */,
@@ -346,10 +363,13 @@
 				84F248782922E19F00606A27 /* NetworkClient.swift in Sources */,
 				843A4E40292722DD00846E72 /* SearchView.swift in Sources */,
 				843A4E3C2927160300846E72 /* BusinessesDecodableModel.swift in Sources */,
-				84A6FDB8292C5700007FE4D8 /* Extensions.swift in Sources */,
+				84A6FDB8292C5700007FE4D8 /* ExtensionsPopover.swift in Sources */,
 				843140D4292D81EA0010DCE6 /* ReviewsDecodableModel.swift in Sources */,
 				8495ED382925866300D61050 /* IpInfoDecodableModel.swift in Sources */,
+				84A276162933DF5700595156 /* ExtensionsToast.swift in Sources */,
 				843140C8292CBB5A0010DCE6 /* TabBarView.swift in Sources */,
+				84A276142933DEFF00595156 /* ToastView.swift in Sources */,
+				84A2761129328B4E00595156 /* ReservationSheet.swift in Sources */,
 				84A2760F2931FFFD00595156 /* IdentifiableLocation.swift in Sources */,
 				843140CC292D62ED0010DCE6 /* BusinessReviewsView.swift in Sources */,
 				84F2488A29235AA800606A27 /* ApiClient.swift in Sources */,

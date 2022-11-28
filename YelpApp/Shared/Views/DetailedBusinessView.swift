@@ -25,7 +25,7 @@ struct DetailedBusinessView: View {
                     
                     DetailedInformationView(detailedBusiness: viewModel.detailedBusiness)
                     
-                    ReservationButton()
+                    ReservationButton(businessName: viewModel.detailedBusiness.name ?? "")
                     
                     ShareBusinessView(businessName: viewModel.detailedBusiness.name ?? "",
                                       businessUrl: viewModel.detailedBusiness.yelpUrl ?? "")
@@ -108,14 +108,20 @@ struct DetailedInformationView: View {
 }
 
 struct ReservationButton: View {
+    @State var businessName: String
+    @State private var showingSheet = false
+    
     var body: some View {
         Button("Reserve Now") {
-            print("Reserved")
+            showingSheet.toggle()
         }
         .frame(width: 130.0, height: 50.0)
         .background(.red)
         .foregroundColor(.white)
         .cornerRadius(15.0)
+        .sheet(isPresented: $showingSheet) {
+            ReservationSheetView(businessName: businessName)
+        }
     }
 }
 
