@@ -52,25 +52,34 @@ struct ReservationSheetView: View {
                         .foregroundColor(ColorConstants.inputNameTextColor)
                         .font(/*@START_MENU_TOKEN@*/.callout/*@END_MENU_TOKEN@*/)
                     
-                    DatePicker("", selection: $date, displayedComponents: .date)
-                    
-                    Picker("", selection: $hours) {
-                        Text("10")
-                        Text("11")
-                        Text("12")
-                        Text("13")
-                        Text("14")
-                        Text("15")
-                        Text("16")
-                        Text("17")
-                    }
-                    
-                    Picker("", selection: $minutes) {
-                        Text("00")
-                        Text("15")
-                        Text("30")
-                        Text("45")
-                    }
+                    DatePicker("",
+                               selection: $date,
+                               in: Date()...,
+                               displayedComponents: .date)
+                    HStack {
+                        Picker("", selection: $hours) {
+                            Text("10")
+                            Text("11")
+                            Text("12")
+                            Text("13")
+                            Text("14")
+                            Text("15")
+                            Text("16")
+                            Text("17")
+                        }.pickerStyle(.menu)
+                         .accentColor(.black)
+
+                        Text(":")
+                            .foregroundColor(ColorConstants.inputNameTextColor)
+
+                        Picker("", selection: $minutes) {
+                            Text("00")
+                            Text("15")
+                            Text("30")
+                            Text("45")
+                        }.pickerStyle(.menu)
+                         .accentColor(.black)
+                    }.background(ColorConstants.greyPickerBackground).cornerRadius(5.0)
                 }
                 
                 HStack {
