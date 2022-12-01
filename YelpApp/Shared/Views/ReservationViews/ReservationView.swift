@@ -1,20 +1,21 @@
 //
-//  ReservationSheet.swift
+//  ReservationView.swift
 //  YelpApp (iOS)
 //
-//  Created by Leonid Hurtovyi on 26.11.2022.
+//  Created by Leonid Hurtovyi on 30.11.2022.
 //
 
 import SwiftUI
 
-struct ReservationSheetView: View {
-    @Environment(\.dismiss) var dismiss
+struct ReservationView: View {
     @State var businessName: String
     @State var email: String = ""
     @State private var date = Date()
     @State private var hours = "10"
     @State private var minutes = "00"
     @State private var emailInvalid = false
+    
+    var didSubmit: Closure?
 
     var body: some View {
         Form {
@@ -93,6 +94,8 @@ struct ReservationSheetView: View {
                                 self.emailInvalid = false
                               }
                             }
+                        } else {
+                            didSubmit?()
                         }
                     }
                     .frame(width: 100.0, height: 50.0)
@@ -118,6 +121,6 @@ struct ReservationSheetView: View {
 
 struct ReservationView_Previews: PreviewProvider {
     static var previews: some View {
-        ReservationSheetView(businessName: "Spudnuts Donuts")
+        ReservationView(businessName: "Spudnuts Donuts")
     }
 }

@@ -21,11 +21,13 @@
 		843A4E40292722DD00846E72 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A4E3F292722DD00846E72 /* SearchView.swift */; };
 		843A4E422927243E00846E72 /* BusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A4E412927243E00846E72 /* BusinessModel.swift */; };
 		84555319292ABAFC00D8F4A7 /* DetailedBusinessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84555318292ABAFC00D8F4A7 /* DetailedBusinessView.swift */; };
+		846B29C02938257200634B35 /* ReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B29BF2938257200634B35 /* ReservationView.swift */; };
+		846B29C2293825C400634B35 /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B29C1293825C400634B35 /* ConfirmationView.swift */; };
 		8495ED3129257FC200D61050 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495ED3029257FC200D61050 /* SearchViewModel.swift */; };
 		8495ED382925866300D61050 /* IpInfoDecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495ED372925866300D61050 /* IpInfoDecodableModel.swift */; };
 		849774E42930152B0060D029 /* ImageSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849774E32930152B0060D029 /* ImageSliderView.swift */; };
 		84A2760F2931FFFD00595156 /* IdentifiableLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2760E2931FFFD00595156 /* IdentifiableLocation.swift */; };
-		84A2761129328B4E00595156 /* ReservationSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2761029328B4E00595156 /* ReservationSheet.swift */; };
+		84A2761129328B4E00595156 /* ReservationSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2761029328B4E00595156 /* ReservationSheetView.swift */; };
 		84A276142933DEFF00595156 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A276132933DEFF00595156 /* ToastView.swift */; };
 		84A276162933DF5700595156 /* ExtensionsToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A276152933DF5700595156 /* ExtensionsToast.swift */; };
 		84A6FDB8292C5700007FE4D8 /* ExtensionsPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6FDB7292C5700007FE4D8 /* ExtensionsPopover.swift */; };
@@ -38,7 +40,7 @@
 		84EC556B29314C810051371E /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC556A29314C810051371E /* CustomProgressView.swift */; };
 		84F248782922E19F00606A27 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F248772922E19F00606A27 /* NetworkClient.swift */; };
 		84F248862923565A00606A27 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F248852923565A00606A27 /* Typealiases.swift */; };
-		84F248882923569200606A27 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F248872923569200606A27 /* NetworkConstants.swift */; };
+		84F248882923569200606A27 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F248872923569200606A27 /* Constants.swift */; };
 		84F2488A29235AA800606A27 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F2488929235AA800606A27 /* ApiClient.swift */; };
 		84F2488D29235D4000606A27 /* AutocompleteDecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F2488C29235D4000606A27 /* AutocompleteDecodableModel.swift */; };
 		84F248912924A64600606A27 /* BookingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F248902924A64600606A27 /* BookingsView.swift */; };
@@ -62,12 +64,14 @@
 		843A4E3F292722DD00846E72 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		843A4E412927243E00846E72 /* BusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessModel.swift; sourceTree = "<group>"; };
 		84555318292ABAFC00D8F4A7 /* DetailedBusinessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedBusinessView.swift; sourceTree = "<group>"; };
+		846B29BF2938257200634B35 /* ReservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationView.swift; sourceTree = "<group>"; };
+		846B29C1293825C400634B35 /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
 		8495ED2F29257D8F00D61050 /* YelpApp--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "YelpApp--iOS--Info.plist"; sourceTree = "<group>"; };
 		8495ED3029257FC200D61050 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		8495ED372925866300D61050 /* IpInfoDecodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IpInfoDecodableModel.swift; sourceTree = "<group>"; };
 		849774E32930152B0060D029 /* ImageSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderView.swift; sourceTree = "<group>"; };
 		84A2760E2931FFFD00595156 /* IdentifiableLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableLocation.swift; sourceTree = "<group>"; };
-		84A2761029328B4E00595156 /* ReservationSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationSheet.swift; sourceTree = "<group>"; };
+		84A2761029328B4E00595156 /* ReservationSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationSheetView.swift; sourceTree = "<group>"; };
 		84A276132933DEFF00595156 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		84A276152933DF5700595156 /* ExtensionsToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsToast.swift; sourceTree = "<group>"; };
 		84A6FDB7292C5700007FE4D8 /* ExtensionsPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsPopover.swift; sourceTree = "<group>"; };
@@ -81,7 +85,7 @@
 		84EC556A29314C810051371E /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		84F248772922E19F00606A27 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		84F248852923565A00606A27 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
-		84F248872923569200606A27 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		84F248872923569200606A27 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		84F2488929235AA800606A27 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		84F2488C29235D4000606A27 /* AutocompleteDecodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteDecodableModel.swift; sourceTree = "<group>"; };
 		84F248902924A64600606A27 /* BookingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingsView.swift; sourceTree = "<group>"; };
@@ -119,9 +123,20 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		846B29BE2938255300634B35 /* ReservationViews */ = {
+			isa = PBXGroup;
+			children = (
+				84A2761029328B4E00595156 /* ReservationSheetView.swift */,
+				846B29BF2938257200634B35 /* ReservationView.swift */,
+				846B29C1293825C400634B35 /* ConfirmationView.swift */,
+			);
+			path = ReservationViews;
+			sourceTree = "<group>";
+		};
 		8495ED33292580FE00D61050 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				846B29BE2938255300634B35 /* ReservationViews */,
 				84F248902924A64600606A27 /* BookingsView.swift */,
 				84C8AB502922DB0600F763AC /* BusinessSearchView.swift */,
 				843A4E3D2927227400846E72 /* ResultsView.swift */,
@@ -132,7 +147,6 @@
 				843140CB292D62ED0010DCE6 /* BusinessReviewsView.swift */,
 				849774E32930152B0060D029 /* ImageSliderView.swift */,
 				84EC556A29314C810051371E /* CustomProgressView.swift */,
-				84A2761029328B4E00595156 /* ReservationSheet.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -237,7 +251,7 @@
 				84A276122933DED200595156 /* CustomToast */,
 				84A6FDBD292C590A007FE4D8 /* CustomPopover */,
 				84C8AB512922DB0700F763AC /* Assets.xcassets */,
-				84F248872923569200606A27 /* NetworkConstants.swift */,
+				84F248872923569200606A27 /* Constants.swift */,
 				84F248852923565A00606A27 /* Typealiases.swift */,
 				84CDB71B292FE90700A907D8 /* MockData.swift */,
 			);
@@ -339,8 +353,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84F248882923569200606A27 /* NetworkConstants.swift in Sources */,
+				84F248882923569200606A27 /* Constants.swift in Sources */,
 				84F2488D29235D4000606A27 /* AutocompleteDecodableModel.swift in Sources */,
+				846B29C02938257200634B35 /* ReservationView.swift in Sources */,
 				843A4E3E2927227400846E72 /* ResultsView.swift in Sources */,
 				843140D0292D6E3E0010DCE6 /* DetailedBusinessDecodableModel.swift in Sources */,
 				843A4E2F2926C59F00846E72 /* GeocodingDecodableModel.swift in Sources */,
@@ -363,13 +378,14 @@
 				84F248782922E19F00606A27 /* NetworkClient.swift in Sources */,
 				843A4E40292722DD00846E72 /* SearchView.swift in Sources */,
 				843A4E3C2927160300846E72 /* BusinessesDecodableModel.swift in Sources */,
+				846B29C2293825C400634B35 /* ConfirmationView.swift in Sources */,
 				84A6FDB8292C5700007FE4D8 /* ExtensionsPopover.swift in Sources */,
 				843140D4292D81EA0010DCE6 /* ReviewsDecodableModel.swift in Sources */,
 				8495ED382925866300D61050 /* IpInfoDecodableModel.swift in Sources */,
 				84A276162933DF5700595156 /* ExtensionsToast.swift in Sources */,
 				843140C8292CBB5A0010DCE6 /* TabBarView.swift in Sources */,
 				84A276142933DEFF00595156 /* ToastView.swift in Sources */,
-				84A2761129328B4E00595156 /* ReservationSheet.swift in Sources */,
+				84A2761129328B4E00595156 /* ReservationSheetView.swift in Sources */,
 				84A2760F2931FFFD00595156 /* IdentifiableLocation.swift in Sources */,
 				843140CC292D62ED0010DCE6 /* BusinessReviewsView.swift in Sources */,
 				84F2488A29235AA800606A27 /* ApiClient.swift in Sources */,

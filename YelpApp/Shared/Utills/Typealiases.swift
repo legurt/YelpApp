@@ -8,3 +8,5 @@
 import Foundation
 
 public typealias NetworkClosure<T> = (Result<T, Error>) -> Void
+
+public typealias Closure = () -> Void
