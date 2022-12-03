@@ -10,7 +10,7 @@ import SwiftUI
 struct TabBarView: View {
     var businessId: String
 
-    @ObservedObject private var viewModel = ResultsViewModel()
+    @StateObject private var viewModel = ResultsViewModel()
 
     var body: some View {
         TabView {

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ReservationView: View {
+    @AppStorage("reservations") var reservations: [ReservationModel] = []
     @State var businessName: String
     @State var email: String = ""
     @State private var date = Date()
@@ -95,7 +96,7 @@ struct ReservationView: View {
                               }
                             }
                         } else {
-                            didSubmit?()
+                            submitReservation()
                         }
                     }
                     .frame(width: 100.0, height: 50.0)
@@ -116,6 +117,17 @@ struct ReservationView: View {
 
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: email)
+    }
+
+    func submitReservation() {
+        let dateFormatter = DateFormatter()
+        let time = hours + ":" + minutes
+        let reservation = ReservationModel(businessName: businessName,
+                                           date: dateFormatter.string(from: date),
+                                           time: time,
+                                           email: email)
+        reservations.append(reservation)
+        didSubmit?()
     }
 }
 

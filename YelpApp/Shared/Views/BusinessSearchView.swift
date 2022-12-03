@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BusinessSearchView: View {
 
-    @ObservedObject private var viewModel = SearchViewModel()
+    @StateObject private var viewModel = SearchViewModel()
 
     var body: some View {
         NavigationView {

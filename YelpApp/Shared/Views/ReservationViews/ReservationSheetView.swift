@@ -20,6 +20,13 @@ struct ReservationSheetView: View {
         } else {
             ConfirmationView(businessName: businessName,
                              didTapDone: closeSheet)
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                      withAnimation {
+                        closeSheet()
+                      }
+                    }
+                }
         }
     }
     

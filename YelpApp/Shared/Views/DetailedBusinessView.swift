@@ -10,6 +10,8 @@ import SwiftUI
 struct DetailedBusinessView: View {
     
     @ObservedObject var viewModel: ResultsViewModel
+    @AppStorage("reservations") var reservations: [ReservationModel] = []
+    @State private var showCancelToast = false
     
     var body: some View {
         if viewModel.detailedBusiness.id == nil {
@@ -25,7 +27,8 @@ struct DetailedBusinessView: View {
                     
                     DetailedInformationView(detailedBusiness: viewModel.detailedBusiness)
                     
-                    ReservationButton(businessName: viewModel.detailedBusiness.name ?? "")
+                    ReservationButton(businessName: viewModel.detailedBusiness.name ?? "",
+                                      didTapCancel: cancelTapped)
                     
                     ShareBusinessView(businessName: viewModel.detailedBusiness.name ?? "",
                                       businessUrl: viewModel.detailedBusiness.yelpUrl ?? "")
@@ -40,6 +43,16 @@ struct DetailedBusinessView: View {
                 .padding()
                 .navigationBarTitle(Text(""), displayMode: .inline)
             }
+            .toast(isShowing: $showCancelToast, text: Text("Your reservation is cancelled."))
+        }
+    }
+    
+    func cancelTapped() {
+        showCancelToast = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+          withAnimation {
+            self.showCancelToast = false
+          }
         }
     }
 }
@@ -108,20 +121,36 @@ struct DetailedInformationView: View {
 }
 
 struct ReservationButton: View {
+    @AppStorage("reservations") var reservations: [ReservationModel] = []
     @State var businessName: String
     @State private var showingSheet = false
     
+    var didTapCancel: Closure?
+    
     var body: some View {
-        Button("Reserve Now") {
-            showingSheet.toggle()
+        Button(!isReserved() ? "Reserve Now" : "Cancel Reservation") {
+            if !isReserved() {
+                showingSheet.toggle()
+            } else {
+                removeReservation()
+                didTapCancel?()
+            }
         }
-        .frame(width: 130.0, height: 50.0)
-        .background(.red)
+        .frame(width: !isReserved() ? 130.0 : 170.0, height: 50.0)
+        .background(!isReserved() ? .red : .blue)
         .foregroundColor(.white)
         .cornerRadius(15.0)
         .sheet(isPresented: $showingSheet) {
             ReservationSheetView(businessName: businessName)
         }
+    }
+    
+    func isReserved() -> Bool {
+        return reservations.contains(where: { $0.businessName == businessName })
+    }
+    
+    func removeReservation() {
+        reservations.removeAll { $0.businessName == businessName }
     }
 }
 
