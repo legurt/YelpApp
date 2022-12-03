@@ -43,4 +43,15 @@ struct MockData {
                           yelpUrl: "https://www.yelp.com/biz/poppy-rose-los-angeles?adjust_creative=roCEFkJffJu3H8IuKTAK4A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=roCEFkJffJu3H8IuKTAK4A")
     
     static let coordinates: CoordinatesModel = CoordinatesModel(lattitude: 34.022350, longitude: -118.285118)
+    
+    static let reservations: [ReservationModel] = [
+        ReservationModel(businessName: "Spudnuts Donuts",
+                         date: "2022-11-05",
+                         time: "10:00",
+                         email: "Abc@gmail.com"),
+        ReservationModel(businessName: "California Donuts",
+                         date: "2022-11-05",
+                         time: "13:00",
+                         email: "Aaa@gmail.com")
+    ]
 }

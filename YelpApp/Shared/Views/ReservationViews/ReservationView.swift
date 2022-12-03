@@ -10,7 +10,7 @@ import SwiftUI
 struct ReservationView: View {
     @AppStorage("reservations") var reservations: [ReservationModel] = []
     @State var businessName: String
-    @State var email: String = ""
+    @State private var email: String = ""
     @State private var date = Date()
     @State private var hours = "10"
     @State private var minutes = "00"
@@ -121,10 +121,11 @@ struct ReservationView: View {
 
     func submitReservation() {
         let dateFormatter = DateFormatter()
-        let time = hours + ":" + minutes
+        dateFormatter.dateFormat = "YYYY-MM-dd"
+        let stringDate = dateFormatter.string(from: date)
         let reservation = ReservationModel(businessName: businessName,
-                                           date: dateFormatter.string(from: date),
-                                           time: time,
+                                           date: stringDate,
+                                           time: hours + ":" + minutes,
                                            email: email)
         reservations.append(reservation)
         didSubmit?()

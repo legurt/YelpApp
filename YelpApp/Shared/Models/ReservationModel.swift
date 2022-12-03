@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ReservationModel: Identifiable, Codable {
+struct ReservationModel: Identifiable, Hashable, Codable {
     var id = UUID()
     var businessName: String
     var date: String
