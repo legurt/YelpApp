@@ -22,12 +22,7 @@ struct ResultsView: View {
             HStack {
                 Spacer()
 
-                VStack {
-                    ProgressView()
-                    Spacer()
-                    Text("Please wait...")
-                        .foregroundColor(ColorConstants.inputNameTextColor)
-                }
+                CustomProgressView()
 
                 Spacer()
             }
