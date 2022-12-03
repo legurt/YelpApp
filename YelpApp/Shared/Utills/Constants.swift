@@ -23,3 +23,12 @@ struct ColorConstants {
 struct ImageConstants {
     static let calendarImage = Image(systemName: "calendar.badge.clock")
 }
+
+struct SearchConstants {
+    static let categories = ["Default",
+                             "Arts and Entertainment",
+                             "Health and Medical",
+                             "Hotels and Travel",
+                             "Food",
+                             "Professional Services"]
+}

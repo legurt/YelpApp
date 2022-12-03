@@ -70,12 +70,9 @@ struct SearchView: View {
                 .font(/*@START_MENU_TOKEN@*/.callout/*@END_MENU_TOKEN@*/)
 
             Picker("", selection: $category) {
-                Text("Default")
-                Text("Arts and Entertainment")
-                Text("Health and Medical")
-                Text("Hotels and Travel")
-                Text("Food")
-                Text("Professional Services")
+                ForEach(SearchConstants.categories, id: \.self) {
+                    Text($0)
+                }
             }
             .pickerStyle(.menu)
         }

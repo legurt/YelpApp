@@ -85,6 +85,18 @@ final class SearchViewModel: ObservableObject {
                        term: String,
                        distance: String,
                        categories: String) {
+        var category = "all"
+        if categories == "Arts & Entertainment" {
+            category = "arts"
+        } else if categories == "Health & Medical" {
+            category = "health"
+        } else if categories == "Hotels & Travel" {
+            category = "hotelstravel"
+        } else if categories == "Food" {
+            category = "food"
+        } else if categories == "Professional Services" {
+            category = "professional"
+        }
         isLoadingBusinesses = true
         self.noResults = false
         self.businesses = []
@@ -92,7 +104,7 @@ final class SearchViewModel: ObservableObject {
                                        longitude: longitude,
                                        term: term,
                                        radius: convertDistanceToMeters(distance),
-                                       categories: categories) { [weak self] result in
+                                       categories: category) { [weak self] result in
             guard let self = self else { return }
             switch result {
                 case .success(let value):
