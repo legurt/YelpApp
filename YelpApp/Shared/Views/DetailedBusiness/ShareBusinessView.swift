@@ -25,9 +25,10 @@ struct ShareBusinessView: View {
                     .frame(width: 40, height: 40)
             }
             Button {
-                let stringUrl = "https://twitter.com/intent/tweet?text=Check%20"
-                + businessName
-                + "%20on%20Yelp.%20"
+                let nameWithoutWhitespaces = businessName.replacingOccurrences(of: " ", with: "%20")
+                let stringUrl = "https://twitter.com/intent/tweet?text="
+                + nameWithoutWhitespaces
+                + "%20"
                 + businessUrl
                 if let url = URL(string: stringUrl) {
                     UIApplication.shared.open(url)

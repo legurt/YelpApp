@@ -20,8 +20,8 @@ struct BusinessLocationView: View {
         _mapRegion =
         State(initialValue: MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude,
                                                           longitude: longitude),
-                           span: MKCoordinateSpan(latitudeDelta: 0.05,
-                                                  longitudeDelta: 0.05)))
+                           span: MKCoordinateSpan(latitudeDelta: 0.1,
+                                                  longitudeDelta: 0.1)))
     }
     
     var body: some View {

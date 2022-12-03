@@ -60,14 +60,9 @@ struct ReservationView: View {
                                displayedComponents: .date)
                     HStack {
                         Picker("", selection: $hours) {
-                            Text("10")
-                            Text("11")
-                            Text("12")
-                            Text("13")
-                            Text("14")
-                            Text("15")
-                            Text("16")
-                            Text("17")
+                            ForEach(PickerOptionsConstants.hours, id: \.self) {
+                                Text($0)
+                            }
                         }.pickerStyle(.menu)
                          .accentColor(.black)
 
@@ -75,10 +70,9 @@ struct ReservationView: View {
                             .foregroundColor(ColorConstants.inputNameTextColor)
 
                         Picker("", selection: $minutes) {
-                            Text("00")
-                            Text("15")
-                            Text("30")
-                            Text("45")
+                            ForEach(PickerOptionsConstants.minutes, id: \.self) {
+                                Text($0)
+                            }
                         }.pickerStyle(.menu)
                          .accentColor(.black)
                     }.background(ColorConstants.greyPickerBackground).cornerRadius(5.0)
@@ -109,7 +103,7 @@ struct ReservationView: View {
                     Spacer()
                 }
             }
-        }.toast(isShowing: $emailInvalid, text: Text("Please enter a valid email"))
+        }.toast(isShowing: $emailInvalid, text: Text("Please enter a valid email."))
     }
     
     func isValidEmail(_ email: String) -> Bool {
@@ -123,9 +117,10 @@ struct ReservationView: View {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd"
         let stringDate = dateFormatter.string(from: date)
+        let time = hours + ":" + minutes
         let reservation = ReservationModel(businessName: businessName,
                                            date: stringDate,
-                                           time: hours + ":" + minutes,
+                                           time: time,
                                            email: email)
         reservations.append(reservation)
         didSubmit?()

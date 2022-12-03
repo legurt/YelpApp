@@ -16,27 +16,21 @@ struct Toast<Presenting>: View where Presenting: View {
     let text: Text
 
     var body: some View {
+        ZStack(alignment: .bottom) {
 
-        GeometryReader { geometry in
+            self.presenting()
 
-            ZStack(alignment: .bottom) {
-
-                self.presenting()
-
-                VStack {
-                    self.text
-                }
-                .frame(width: geometry.size.width / 1.5,
-                       height: geometry.size.height / 8)
-                .background(Color.secondary.colorInvert())
-                .foregroundColor(Color.primary)
-                .cornerRadius(20)
-                .transition(.slide)
-                .opacity(self.isShowing ? 1 : 0)
+            VStack {
+                self.text
             }
-
+            .frame(width: 250,
+                   height: 90)
+            .background(Color.secondary.colorInvert())
+            .foregroundColor(Color.primary)
+            .cornerRadius(20)
+            .transition(.slide)
+            .opacity(self.isShowing ? 1 : 0)
         }
-
     }
 
 }

@@ -22,9 +22,11 @@ struct DetailedBusinessView: View {
                     Text(viewModel.detailedBusiness.name ?? "")
                         .font(.title)
                         .bold()
-                        .padding(.bottom)
+                        .padding()
                     
                     DetailedInformationView(detailedBusiness: viewModel.detailedBusiness)
+                        .padding(.leading, 9)
+                        .padding(.trailing, 9)
                     
                     ReservationButton(businessName: viewModel.detailedBusiness.name ?? "",
                                       didTapCancel: cancelReservationTapped)
@@ -39,10 +41,10 @@ struct DetailedBusinessView: View {
                     }
                     Spacer()
                 }
-                .padding()
                 .navigationBarTitle(Text(""), displayMode: .inline)
             }
-            .toast(isShowing: $showCancelToast, text: Text("Your reservation is cancelled."))
+            .toast(isShowing: $showCancelToast,
+                   text: Text("Your reservation is cancelled."))
         }
     }
     

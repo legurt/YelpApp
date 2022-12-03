@@ -70,7 +70,7 @@ struct SearchView: View {
                 .font(/*@START_MENU_TOKEN@*/.callout/*@END_MENU_TOKEN@*/)
 
             Picker("", selection: $category) {
-                ForEach(SearchConstants.categories, id: \.self) {
+                ForEach(PickerOptionsConstants.categories, id: \.self) {
                     Text($0)
                 }
             }

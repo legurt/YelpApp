@@ -24,11 +24,25 @@ struct ImageConstants {
     static let calendarImage = Image(systemName: "calendar.badge.clock")
 }
 
-struct SearchConstants {
+struct PickerOptionsConstants {
     static let categories = ["Default",
                              "Arts and Entertainment",
                              "Health and Medical",
                              "Hotels and Travel",
                              "Food",
                              "Professional Services"]
+    
+    static let hours = ["10",
+                        "11",
+                        "12",
+                        "13",
+                        "14",
+                        "15",
+                        "16",
+                        "17"]
+    
+    static let minutes = ["00",
+                          "15",
+                          "30",
+                          "45"]
 }

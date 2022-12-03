@@ -28,19 +28,19 @@ struct MockData {
     
     static let detiailedBusiness: DetailedBusinessModel =
     DetailedBusinessModel(id: "",
-                          name: "Resident",
+                          name: "California Donuts",
                           categories:
-                                "Cocktail Bars | Music Venues | Beer Gardens",
+                                "Bakeries | Donuts | Coffee & Tea",
                           coordinates: nil,
                           phone: "(323) 924-9116",
                           isOpen: true,
                           address:
-                                "428 S Hewitt St, Los Angeles, CA 90013",
-                          images: ["https://s3-media1.fl.yelpcdn.com/bphoto/prOnT088IHeWq3UqY9Pmyw/o.jpg",
-                                   "https://s3-media2.fl.yelpcdn.com/bphoto/gH5cz0vki6R6lGDtrU1L9Q/o.jpg",
-                                   "https://s3-media2.fl.yelpcdn.com/bphoto/nyBHT0nu7RlNuploWaJiWg/o.jpg"],
+                                "3540 W 3rd St, Los Angeles, CA 90020",
+                          images: ["https://s3-media2.fl.yelpcdn.com/bphoto/f4qoSJYs1SFdOU2pYaGMWQ/o.jpg",
+                                   "https://s3-media3.fl.yelpcdn.com/bphoto/xFJcoSaXM4F9KyZHOU4Mqw/o.jpg",
+                                   "https://s3-media2.fl.yelpcdn.com/bphoto/dIAVaGk-Kf1Y8Rpua4jwMg/o.jpg"],
                           price: "$$",
-                          yelpUrl: "https://www.yelp.com/biz/poppy-rose-los-angeles?adjust_creative=roCEFkJffJu3H8IuKTAK4A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=roCEFkJffJu3H8IuKTAK4A")
+                          yelpUrl: "https://www.yelp.com/biz/california-donuts-los-angeles-2?adjust_creative=roCEFkJffJu3H8IuKTAK4A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=roCEFkJffJu3H8IuKTAK4A")
     
     static let coordinates: CoordinatesModel = CoordinatesModel(lattitude: 34.022350, longitude: -118.285118)
     
