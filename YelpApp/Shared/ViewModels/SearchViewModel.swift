@@ -117,9 +117,6 @@ final class SearchViewModel: ObservableObject {
                     self.noResults = false
                 }
                 for business in value.businesses {
-                    if i > 10 {
-                        break
-                    }
                     var businessModel = business.toDomain(number: i)
                     businessModel.distance = self.convertDistanceToMiles(businessModel.distance)
                     self.businesses.append(businessModel)
